@@ -19,7 +19,6 @@ import javax.persistence.UniqueConstraint;
 import javax.persistence.Version;
 
 import org.helianto.task.def.ReportJournalType;
-import org.helianto.task.domain.ReportFolder;
 import org.helianto.user.domain.User;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
