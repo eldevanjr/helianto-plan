@@ -89,7 +89,7 @@ public interface ReportJournalRepository extends JpaRepository<ReportJournal, Se
 			+ "  select max(reportJournal_.id) "
 			+ "  from ReportJournal r_ "
 			+ "  where r_.user.id = ?1 "
-			+ "  group by r_.user.id, r_.report.id, r_.reportJournalType, r_.day "
+			+ "  group by r_.report.id, r_.reportJournalType, r_.day "
 			+ ") "
 			+ "and reportJournal_.issueDate between ?2 and ?3 "
 			+ "order by reportJournal_.reportJournalType ")

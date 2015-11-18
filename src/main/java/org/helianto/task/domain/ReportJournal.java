@@ -22,6 +22,8 @@ import org.helianto.task.def.ReportJournalType;
 import org.helianto.task.domain.ReportFolder;
 import org.helianto.user.domain.User;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * A report journal.
  * 
@@ -42,6 +44,7 @@ public class ReportJournal implements Serializable, Comparable<ReportJournal>  {
 	
 	@ManyToOne
 	@JoinColumn(name="userId")
+	@JsonIgnore
 	private User user;
 	
 	@Transient
@@ -61,6 +64,7 @@ public class ReportJournal implements Serializable, Comparable<ReportJournal>  {
 	
 	@ManyToOne
 	@JoinColumn(name="reportId")
+	@JsonIgnore
 	private Report report;
 	
 	@Transient
@@ -138,6 +142,7 @@ public class ReportJournal implements Serializable, Comparable<ReportJournal>  {
 	/**
 	 * User to record the journal activity.
 	 */
+	@JsonIgnore
 	public User getUser() {
 		return user;
 	}
