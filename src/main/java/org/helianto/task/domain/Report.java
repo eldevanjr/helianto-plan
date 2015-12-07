@@ -1094,7 +1094,7 @@ public class Report
 		if (isCategoryEnabled()) {
 			return getCategory().getScriptList();
 		}
-		return null;
+		return new ArrayList<String>();
 	}
 	
     public String getScriptItems() {
@@ -1549,6 +1549,10 @@ public class Report
    			setParsedContent(command.getParsedContent());
    			setWorkflowPhase(command.getWorkflowPhase());
    			setMainRequirementSequence(command.getMainRequirementSequence());
+   			
+   			setContentAsString(command.getContentAsString());
+   			setPriority(command.getPriority());
+
    			return this;
    		}
     
