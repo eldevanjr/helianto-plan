@@ -744,6 +744,7 @@ public class Report
         this.taskDesc = taskDesc;
     }
     
+    @JsonIgnore
     public String getReportDesc() {
         return this.taskDesc;
     }
